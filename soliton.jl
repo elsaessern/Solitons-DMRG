@@ -1,3 +1,4 @@
+import Pkg; Pkg.add("ITensors")
 #-----------kitaev paper chiral soliton------------
 using ITensors, ITensorMPS
 using Plots
