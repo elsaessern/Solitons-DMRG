@@ -19,7 +19,7 @@
 
 #job resource specifications
 #SBATCH -p share
-#SBATCH --mem=8G
+#SBATCH --mem=30G
 #SBATCH -c 4
 #SBATCH --time=24:00:00
 
@@ -31,6 +31,15 @@
 # load python yay 
 module load julia
 
+Xvfb :5 &
+export DISPLAY=:5
+XvfbPID=$(ps | grep Xvfb | grep -E -o ^[[:blank:]]*[[:digit:]]+ | grep -E -o [[:digit:]]+)
+
 
 # run the thing 
-julia soliton.jl $@
+julia --project=. -e 'using Pkg; Pkg.instantiate()'
+julia --project=. solitons.jl
+
+
+# delete virtual display buffer 
+kill $XvfbPID

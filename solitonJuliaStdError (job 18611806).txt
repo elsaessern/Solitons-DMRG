@@ -1,0 +1,4 @@
+_XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
+_XSERVTransmkdir: Mode of /tmp/.X11-unix should be set to 1777
+/var/spool/slurmd/job18611806/slurm_script: line 41: 1559148 Killed                  julia --project=. solitons.jl
+slurmstepd: error: Detected 1 oom_kill event in StepId=18611806.batch. Some of the step tasks have been OOM Killed.
