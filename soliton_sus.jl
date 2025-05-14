@@ -232,7 +232,7 @@ end
         end
     end
     display(final_plot_chi_e) 
-    # savefig(final_plot_chi_e, "chi_e_vs_phi_xy.png")
+    savefig(final_plot_chi_e, "chi_e_vs_phi_xy.png")
 
 
 end
