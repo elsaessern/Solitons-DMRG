@@ -98,9 +98,9 @@ for h in h_values
         
             
             # DMRG parameters
-            nsweeps = 250 # increase number of sweeps until it converges. For lower h term, LOTS more sweeps are needed (500+)
+            nsweeps = 1000 # increase number of sweeps until it converges. For lower h term, LOTS more sweeps are needed (500+)
             maxdim = [600, 600, 800, 800, 1200, 1200, 1200,2000,2000,3000] # maxdim for convergence. Kitaev paper uses "more than 1000" for the bond dim.
-            cutoff = [1E-12] # adjust this to tune accuracy of convergence. 1E-12 is "almost exact." kitaev paper uses less than 1E-10.
+            cutoff = [1E-10] # adjust this to tune accuracy of convergence. 1E-12 is "almost exact." kitaev paper uses less than 1E-10.
             noise = [1E-6]
             print("\n------Ground State------\n")
             energy,psi = dmrg(H,psi0;nsweeps,maxdim,cutoff, noise, outputlevel=0)
