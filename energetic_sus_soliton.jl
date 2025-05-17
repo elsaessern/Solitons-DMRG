@@ -34,7 +34,7 @@ end
 
 
 let
-    N = 99 # length of chain
+    N = 51 # length of chain
     sites = siteinds("S=1/2",N)
     J = 1.0 # J <-> coupling
     K = 1.0
@@ -136,9 +136,9 @@ let
     colors_chi_e = cgrad(:viridis, length(h_plot_values_sorted), categorical=true)
 
     final_plot_chi_e = plot(
-        xlabel = L"\phi_{xy} \text{ (degrees)}", 
-        ylabel = L"\chi^{e_{\phi_{xy}}}", 
-        title = L"Energetic Susceptibility vs. Field Angle", 
+        xlabel = L"\phi_{xy}", 
+        ylabel = L"\chi^e_{\phi_{xy}}", 
+        title = "Energetic Susceptibility vs. Field Angle", 
         legend = :topright 
     )
     
