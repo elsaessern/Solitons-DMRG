@@ -34,14 +34,14 @@ end
 
 
 let
-    N = 51 # length of chain
+    N = 99 # length of chain
     sites = siteinds("S=1/2",N)
     J = 1.0 # J <-> coupling
     K = 1.0
     theta_z = 0.0 
 
-    h_values = [0.6] 
-    theta_values_denomenator_range = 3.5:0.025:4.5 
+    h_values = [0.5, 0.55, 0.6,0.65,0.7] 
+    theta_values_denomenator_range = 3.5:0.025:4.75
     theta_values_denomenator = reverse(collect(theta_values_denomenator_range))
 
 
@@ -160,6 +160,5 @@ let
     end
     display(final_plot_chi_e) 
     savefig(final_plot_chi_e, "chi_e_vs_phi_xy.png")
-    
     println("\nAll calculations and plotting finished.")
 end
