@@ -159,6 +159,7 @@ let
         end
     end
     display(final_plot_chi_e) 
-
+    savefig(final_plot_chi_e, "chi_e_vs_phi_xy.png")
+    
     println("\nAll calculations and plotting finished.")
 end
